@@ -1,0 +1,131 @@
+/*
+  Reset the browser styles
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+.root {
+  width: 100%;
+  height: 100vh;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.App {
+  background-color: #006E55;
+  width: 93%;
+  height: 90vh;
+  color: white;  
+  border: 2.8rem solid #7C4B23;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.question {
+  float: left;
+}
+
+.question-counter {
+  font-size: 1rem;
+  padding: 1rem;
+  margin-left: 3rem;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-left: 3rem;
+}
+
+.question li.option {
+  list-style: none;
+  padding: 1rem;
+  font-size: 1rem;  
+}
+
+.choices-container {
+  position: absolute;
+  bottom: 3rem;
+  text-align: center;
+}
+
+.choices-container ul {
+  display: inline-block;
+}
+
+.choices-container li {
+  list-style: none;
+  position: relative;
+  font-size: 1.2rem;
+  border: 1px solid white;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: all .2s ease;
+}
+
+.choices-container li:hover {
+  background-color: white;
+  color: #006E55;
+}
+
+/* Result Styles */
+
+.result-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 35%;
+  font-size: 1rem;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;  
+  height: 2rem;
+  padding: 1px;
+  line-height: 30px;
+}
+
+.result .question-no {
+  width: 10%;
+  border: 1px solid white;
+  border-radius: 2rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.result .question-text {
+  flex: 1;
+  margin: 0;
+  border-bottom: 1px solid white;
+}
+
+.result .correct-answer {
+  background-image: url('./assets/thumbs-up.png');
+  width: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 4px;
+}
+
+.result .wrong-answer {
+  background-image: url('./assets/thumbs-down.png');
+  width: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 4px;
+}
